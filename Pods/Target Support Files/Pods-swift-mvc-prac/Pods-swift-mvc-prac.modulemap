@@ -1,0 +1,6 @@
+framework module Pods_swift_mvc_prac {
+  umbrella header "Pods-swift-mvc-prac-umbrella.h"
+
+  export *
+  module * { export * }
+}
