@@ -79,15 +79,15 @@
 			isa = PBXGroup;
 			children = (
 				B2FAEFBB205CEF00001E0FF9 /* AppDelegate.swift */,
-				B2FAEFBF205CEF00001E0FF9 /* Main.storyboard */,
-				B2FAEFC2205CEF00001E0FF9 /* Assets.xcassets */,
-				B2FAEFC4205CEF00001E0FF9 /* LaunchScreen.storyboard */,
-				B2FAEFC7205CEF00001E0FF9 /* Info.plist */,
 				B2FAEFCD205CEF51001E0FF9 /* Model.swift */,
 				B2FAEFCF205CEF56001E0FF9 /* View.swift */,
 				B2FAEFD1205CEF5E001E0FF9 /* Controller.swift */,
 				B2FAEFD3205CEF68001E0FF9 /* EntryPoint.swift */,
 				B2FAEFD5205CEF77001E0FF9 /* CatCollectionViewLayout.swift */,
+				B2FAEFC2205CEF00001E0FF9 /* Assets.xcassets */,
+				B2FAEFBF205CEF00001E0FF9 /* Main.storyboard */,
+				B2FAEFC4205CEF00001E0FF9 /* LaunchScreen.storyboard */,
+				B2FAEFC7205CEF00001E0FF9 /* Info.plist */,
 			);
 			path = "swift-mvc-prac";
 			sourceTree = "<group>";
