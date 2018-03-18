@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B296100C8B9EC94DFB0F57B336D8C313"
-               BuildableName = "Pods_ios_architectures_prac.framework"
-               BlueprintName = "Pods-ios-architectures-prac"
+               BlueprintIdentifier = "BA49987E1244486D9C73C79C6B2D73B2"
+               BuildableName = "Pods_swift_mvp_prac.framework"
+               BlueprintName = "Pods-swift-mvp-prac"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B296100C8B9EC94DFB0F57B336D8C313"
-            BuildableName = "Pods_ios_architectures_prac.framework"
-            BlueprintName = "Pods-ios-architectures-prac"
+            BlueprintIdentifier = "BA49987E1244486D9C73C79C6B2D73B2"
+            BuildableName = "Pods_swift_mvp_prac.framework"
+            BlueprintName = "Pods-swift-mvp-prac"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

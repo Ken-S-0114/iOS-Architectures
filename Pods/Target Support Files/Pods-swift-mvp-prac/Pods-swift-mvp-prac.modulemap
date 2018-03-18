@@ -1,0 +1,6 @@
+framework module Pods_swift_mvp_prac {
+  umbrella header "Pods-swift-mvp-prac-umbrella.h"
+
+  export *
+  module * { export * }
+}

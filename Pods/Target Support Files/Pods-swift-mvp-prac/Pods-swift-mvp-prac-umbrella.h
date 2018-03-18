@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_ios_architectures_pracVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_ios_architectures_pracVersionString[];
+FOUNDATION_EXPORT double Pods_swift_mvp_pracVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_swift_mvp_pracVersionString[];
 

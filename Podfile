@@ -9,3 +9,12 @@ target 'swift-mvc-prac' do
   # Pods for swift-mvc-prac
 
 end
+
+target 'swift-mvp-prac' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+	pod 'SWXMLHash'
+ 	pod 'Kingfisher'
+  # Pods for swift-mvc-prac
+
+end

@@ -8,6 +8,11 @@
 
 import UIKit
 
-class EntryPoint: UICollectionViewLayout {
-
+struct EntryPoint {
+  func main() -> UIViewController {
+    let view = CatListVC()
+    view.presenter = CatPresenterImpl(view: view)
+    
+    return view
+  }
 }

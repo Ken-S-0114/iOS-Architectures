@@ -26,6 +26,7 @@ class CatListVC: UIViewController {
     return collectionView
   }()
   
+  // Modelを参照
   fileprivate var cats: [Cat] = []
   
   override func viewDidLoad() {
@@ -56,6 +57,7 @@ class CatListVC: UIViewController {
     }
   }
   
+  // 猫の画像を取得
   private func fetchData(completion: @escaping (([Cat]) -> Void)) {
     guard let url = URL(string: "http://thecatapi.com/api/images/get?format=xml&results_per_page=20&size=small") else {
       completion([])
