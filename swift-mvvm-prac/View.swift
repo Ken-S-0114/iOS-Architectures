@@ -1,8 +1,8 @@
 //
 //  View.swift
-//  swift-mvp-prac
+//  swift-mvvm-prac
 //
-//  Created by 佐藤賢 on 2018/03/19.
+//  Created by 佐藤賢 on 2018/03/20.
 //  Copyright © 2018年 佐藤賢. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 
-class CatListVC: UIViewController, CatView {
+class CatListVC: UIViewController {
   private lazy var collectionView: UICollectionView = {
     let cellWidth = self.view.frame.width / 3
     let layout = CatCollectionViewLayout(itemSize: cellWidth)
@@ -27,7 +27,7 @@ class CatListVC: UIViewController, CatView {
   }()
   
   // PresenterのProtocol参照
-  var presenter: CatPresenter!
+  var viewModel: CatViewModel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,8 +35,14 @@ class CatListVC: UIViewController, CatView {
     title = "Cat List"
     
     setupUI()
-    // Presenterに処理を委譲
-    presenter.showData()
+    // イベントをViewModelにbind
+    viewModel.bind { [weak self] in
+      DispatchQueue.main.sync {
+        self?.collectionView.refreshControl?.endRefreshing()
+        self?.collectionView.reloadData()
+      }
+    }
+    viewModel.reloadData()
   }
   
   func setupUI() {
@@ -44,12 +50,7 @@ class CatListVC: UIViewController, CatView {
   }
   
   @objc func pullToRefresh() {
-    presenter.showData()
-  }
-  
-  func reloadData() {
-    collectionView.refreshControl?.endRefreshing()
-    collectionView.reloadData()
+    viewModel.reloadData()
   }
   
 }
@@ -57,7 +58,7 @@ class CatListVC: UIViewController, CatView {
 // MVCではController内で記述していたがMVPではView内で記述(処理はPresenterに委譲)
 extension CatListVC: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return presenter.numberOfCats
+    return viewModel.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -65,8 +66,8 @@ extension CatListVC: UICollectionViewDataSource {
       return UICollectionViewCell()
     }
     
-    // 画像を表示する処理をPresenterに委譲
-    cell.configure(with: presenter.imageUrl(index: indexPath.row))
+    // 画像を表示する処理をviewModelに委譲
+    cell.configure(with: viewModel[indexPath.row])
     
     return cell
   }
