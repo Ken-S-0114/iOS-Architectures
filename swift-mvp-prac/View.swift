@@ -9,6 +9,9 @@
 import UIKit
 import Kingfisher
 
+protocol CatView: class {
+  func reloadData()
+}
 
 class CatListVC: UIViewController, CatView {
   private lazy var collectionView: UICollectionView = {

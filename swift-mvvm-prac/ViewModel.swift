@@ -26,7 +26,6 @@ class CatDefaultViewModel: CatViewModel {
     }
   }
   
-
   var count: Int {
     return cats.count
   }
